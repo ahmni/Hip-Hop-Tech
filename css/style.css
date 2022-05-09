@@ -1122,6 +1122,7 @@ we use margins because transforms will be applied dynamically */
 	-o-animation:      animatetop 5s; /* Opera 12+ */
 	animation:         animatetop 5s; /* IE 10+, Fx 29+ */
 	z-index: 1000;
+	overflow-y: auto;
 	}
   
   /* Add Animation */

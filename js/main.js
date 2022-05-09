@@ -347,6 +347,7 @@
 			body.appendChild(title2)
 			body.appendChild(title3)
 			body.appendChild(title4)
+			body.appendChild(title5)
 			header.appendChild(title)
 		} else if (author == "Grandmaster Flash") {
 			

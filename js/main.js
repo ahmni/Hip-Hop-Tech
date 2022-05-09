@@ -309,7 +309,7 @@
 		body.classList.add('modal-body')
 		const footer = document.createElement("div")
 		footer.classList.add('modal-footer')
-		body.appendChild(text)
+		
 		content.appendChild(close)
 		content.appendChild(header)
 		content.appendChild(body)
@@ -317,7 +317,39 @@
 		console.log(document.getElementsByClassName('artist--player')[0].textContent)
 		let author = document.getElementsByClassName('artist--player')[0].textContent
 		if (author == "Kanye West" ) {
-			text.innerHTML = "WE THE CULTURE "
+			text.innerHTML = "Vinyls had their first debue in 1901. However, they only became truly popular during the Roaring Twenties when Americans would host parties celebrating and dancing the successes of the time. The sales of records would go from '4 million units per year, ...to over 100 million per year by 1920' (VinyImint)."
+			const title = document.createElement("h2")
+			title.innerHTML = 'The History'
+			const title1 = document.createElement("h4")
+			title1.innerHTML = "Vinyls"
+			const title2 = document.createElement("h4")
+			title2.innerHTML = "Tape Recorders"
+			const title3 = document.createElement("h4")
+			title3.innerHTML = "Compact Discs"
+			const title4 = document.createElement("h4")
+			title4.innerHTML = "MP3"
+			const title5 = document.createElement("h4")
+			title5.innerHTML = "Streaming"
+			const text1 = document.createElement("p")
+			text1.innerHTML = "Portable audiotape recorder were invented in 1951, and started as much more expensive than vinyls. By consumers and musicians, they were seen as “soically inferior and less durable” than vinyls (Haring 25). Due to these challenges, it was not able to take over the popularity of vinyls.  It only had a breakthrough in 1964 after the tape cassette player which was half the price of vinyl, with better quality, and all the other benefits of portable audiotapes compared to vinyl. "
+			const text2 = document.createElement("p")
+			text2.innerHTML = "The music industry was looking for something that could improve the quality from cassette players, yet have them in a portable format. This led to the invention of the compact disc or CDs. CDs are the successor of vinyls, being smaller and having better audio quality and durability. The small size allowed them to be more portable and were a massive commercial success, having “explosive growth in the 1980s” and “resulting in the greatest boom period in audio recording history” Haring(28)."
+			const text3 = document.createElement("p")
+			text3.innerHTML = "Invented in the 1990s by Michael Robertson. MP3 audio compression software “squeezed a digital sound file down to a size practical for Internet distribution” (Haring 3).MP3 made it easily accessible for anyone anywhere to have access to music worldwide in minutes through the internet. It revolutionized how people marketed, distributed, and listened to music. Specifically it was popular for young adults and college students, as they were the main ones using the internet at the time, so it was a natural transition from CDs. "
+			const text4 = document.createElement("p")
+			text4.innerHTML = "With explosive popularity of the internet, record labels and the music industry as a whole were crumbling as profits were at an all time low since the CD boom. No one was buying CDs anymore after the 2000s, and piracy was rampant. However, starting in 2010, streaming services like spotify, itunes, and youtube. would eventually be able to revitalize the music industry. With the development of these software services, anyone can have access to all the music they want with only a $5 subscription monthly, or free with ads and worse quality. At such a low price point and with extreme ease of access, it dissuaded piracy and allowed record labels to get subsidies from these streaming companies  (AUA 5-8)."
+			title2.appendChild(text1)
+			title3.appendChild(text2)
+			title4.appendChild(text3)
+			title5.appendChild(text4)
+			title1.appendChild(text)
+			body.appendChild(title1)
+			body.appendChild(title2)
+			body.appendChild(title3)
+			body.appendChild(title4)
+			header.appendChild(title)
+		} else if (author == "Grandmaster Flash") {
+			
 		}
 
 

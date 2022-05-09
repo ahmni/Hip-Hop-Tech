@@ -1102,10 +1102,10 @@ we use margins because transforms will be applied dynamically */
   /* Modal Content */
   .modal-content {
 	position: absolute;
-	background-color: #fefefe;
+	background-color: #45bd94;
 	margin: auto;
 	padding: 0;
-	border: 1px solid #888;
+	border: 1px solid rgb(69, 203, 150);
 	width: 38%;
 	height:85%;
 	max-height:85%;
@@ -1131,3 +1131,14 @@ we use margins because transforms will be applied dynamically */
 	to {top: 0; opacity: 1}
 	
   } 
+
+  .data {
+	  width: 100%;
+  }
+
+  h4 {
+	  color: white;
+  }
+  p {
+	  color: black;
+  }

@@ -338,18 +338,34 @@
 			text3.innerHTML = "Invented in the 1990s by Michael Robertson. MP3 audio compression software “squeezed a digital sound file down to a size practical for Internet distribution” (Haring 3).MP3 made it easily accessible for anyone anywhere to have access to music worldwide in minutes through the internet. It revolutionized how people marketed, distributed, and listened to music. Specifically it was popular for young adults and college students, as they were the main ones using the internet at the time, so it was a natural transition from CDs. "
 			const text4 = document.createElement("p")
 			text4.innerHTML = "With explosive popularity of the internet, record labels and the music industry as a whole were crumbling as profits were at an all time low since the CD boom. No one was buying CDs anymore after the 2000s, and piracy was rampant. However, starting in 2010, streaming services like spotify, itunes, and youtube. would eventually be able to revitalize the music industry. With the development of these software services, anyone can have access to all the music they want with only a $5 subscription monthly, or free with ads and worse quality. At such a low price point and with extreme ease of access, it dissuaded piracy and allowed record labels to get subsidies from these streaming companies  (AUA 5-8)."
+			const text5 = document.createElement("p")
+		
+			text5.innerHTML = "Fun fact - Napster was the first online streaming service in 1999, but record labels shut them down as they were scared it was going to ruin their sales of CDs. It had 2.4 million consumers until its shutdown in 2001. (AUA 6-7)."
+			const img = document.createElement('img')
+			img.className = 'data'
+			img.src = "https://preview.redd.it/104jk2z09bo51.jpg?width=960&crop=smart&auto=webp&s=b7516d7abc682634592c419e7649303c5b1dc6cd"
 			title2.appendChild(text1)
 			title3.appendChild(text2)
 			title4.appendChild(text3)
 			title5.appendChild(text4)
+			title5.appendChild(text5)
 			title1.appendChild(text)
 			body.appendChild(title1)
 			body.appendChild(title2)
 			body.appendChild(title3)
 			body.appendChild(title4)
 			body.appendChild(title5)
+			body.appendChild(img)
 			header.appendChild(title)
 		} else if (author == "Grandmaster Flash") {
+			
+		} else if (author == "La Bouche") {
+
+		} else if (author == "Will Smith") {
+
+		} else if (author == "Stetsasonic") {
+
+		} else if (author == "Nas") {
 			
 		}
 

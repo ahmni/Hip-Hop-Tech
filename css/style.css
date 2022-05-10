@@ -1085,7 +1085,7 @@ we use margins because transforms will be applied dynamically */
  /* Modal Header */
  .modal-header {
 	padding: 2px 16px;
-	background-color: #5cb85c;
+	background-color: rgb(69, 203, 150);
 	color: white;
   }
   
@@ -1141,4 +1141,8 @@ we use margins because transforms will be applied dynamically */
   }
   p {
 	  color: black;
+  }
+
+  ul {
+	  color: #6939a8;
   }

@@ -296,6 +296,9 @@
 		this._operate();
 		// Control the play/stop ctrls status.
 		this._ctrlPlay('play');
+		if  (document.getElementsByClassName('modal-content').length > 0) {
+			document.getElementsByClassName('modal-content')[0].remove();
+		}
 		const content = document.createElement("div")
 		content.classList.add('modal-content')
 		const close = document.createElement("span")
@@ -314,7 +317,7 @@
 		content.appendChild(header)
 		content.appendChild(body)
 		content.appendChild(footer)
-		console.log(document.getElementsByClassName('artist--player')[0].textContent)
+	
 		let author = document.getElementsByClassName('artist--player')[0].textContent
 		if (author == "Kanye West" ) {
 			text.innerHTML = "Vinyls had their first debue in 1901. However, they only became truly popular during the Roaring Twenties when Americans would host parties celebrating and dancing the successes of the time. The sales of records would go from '4 million units per year, ...to over 100 million per year by 1920' (VinyImint)."
@@ -358,8 +361,113 @@
 			body.appendChild(img)
 			header.appendChild(title)
 		} else if (author == "Grandmaster Flash") {
+			text.innerHTML = "To understand why Hip-hop came to be, one has to understand what Hip-hop is. Hip-hop is commonly characterized in 4 elements:"
+			const list = document.createElement("ul")
+			const listItem1 = document.createElement("li")
+			listItem1.innerHTML = "DJing"
+			const listItem2 = document.createElement("li")
+			const listItem3 = document.createElement("li")
+			const listItem4 = document.createElement("li")
+			listItem2.innerHTML = "MCing (Rapping)"
+			listItem3.innerHTML = "B-Boying (Break Dancing)"
+			listItem4.innerHTML = "Graffiti"
+			list.appendChild(listItem1)
+			list.appendChild(listItem2)
+			list.appendChild(listItem3)
+			list.appendChild(listItem4)
+			const textExtra = document.createElement("p")
+			textExtra.innerHTML = "However, many describe Hip-Hop to have far more than just these characteristics. In reality, hip-hop is much more complex, it is a lifestyle. Being a Hip-Hop artist influences “the way you walk the way you talk, the way you look, the way you communicate” (DJ Kool Herc). "
+			
+			
+			const title = document.createElement("h2")
+			title.innerHTML = 'The Reasons'
+			const title1 = document.createElement("h4")
+			title1.innerHTML = "Definition"
+			const title2 = document.createElement("h4")
+			title2.innerHTML = "Historical Context: The Neglected"
+			const title4 = document.createElement("h4")
+			title4.innerHTML = "Digital Technology"
+		
+			const text1 = document.createElement("p")
+			text1.innerHTML = "“If blues culture had developed under the conditions of oppressive, forced labor, hip-hop culture would arise from conditions of no work” (Chang 13). The South Bronx in new york city had lost 600,00 manufacturing jobs in the mid-seventies, and the youth unemployment rate hit 60%. Since racism was still prevalent at this time, most of the jobs lost were from people of color, exacerbating the issue of economic inequality. In order to survive, these people had to look at other avenues of making money such as working as “rent-a-thugs” for slumlords where they would commit insurance fraud, setting houses on fire, and/or robbing them. “Between 1973 and 1977, 30,000 fires wet set in the South Bronx alone” (Chang 17). People would also join gangs as it was their only way of amassing money. This was during a time when Nixon was president, and the unofficial policy of “benign neglect” was put into place for inner cities. Nixon and others believed that black people should have been satisfied after the Civil Rights Act, and seeing them acting out in this way made them angry. So they willingly neglected the issues facing the black community, due to the fact that they believed there was nothing more they could do to help them. "
+			const text2 = document.createElement("p")
+			text2.innerHTML = "Black Panthers were deemed “the greatest threat to the internal security of the country” by J. Edgar Hoover, who was the first director of the FBI (Chang 46). The Panthers wanted to continue the revolution started by leaders such as MLK, Malcolm X, and Bobby Kennedy who were all killed, by “any means necessary.” They set up their offices in New York City and attracted disenfranchised kids from impoverished neighborhoods to their work. This effort by the Black Panther provided jobs, and they actively advocated for freedom, jobs, justice, housing, education, and an end to police brutality. Leader of the Panthers, Fred Hampton, believed that creating alliances instead of terrorizing the weak and poor would make them a powerful force for revolution. However, the FBI was afraid of the Panthers, and would actively try to arrest and counter any protests they started in New York. Hip-Hop’s lyrics would be influenced by the efforts of the Black Panthers, with allusions to MLK, Malcolm X, and advocation for justice and an end to police brutality."
+			const text3 = document.createElement("p")
+			text3.innerHTML = "All hip-hop beats are predicated on using digital technology to take “sounds from old records and organize them into new patterns”(Schloss 1). Beats themselves are defined as musical collages of sections of recorded sound. When DJs and MCs started to record songs instead of doing only live performances, their techniques became more complex. MCs began to create more detailed narratives with complex rhythms, cadences, and rhyme, heavily influenced by rhythmic poetry. This gives to the name rap which stands for rhythm and poetry. Strategies were developed in the studio that developed “digital sampling,” eventually these DJs would be the first producers. "
+			const text4 = document.createElement("p")
+			const subHeader1 = document.createElement("h5")
+			subHeader1.textContent = "Turning Turntables to Instruments"
+			text4.innerHTML = "Grandmaster Flash would create many of the techniques of sampling used in hip hop. “Punch phrasing” –playing a quick burst from a record on one turntable while it continues on the other– and “back spinning” – alternately spinning records backward to repeat the same phrase over and over are credited to Flash” (George 18). Furthermore, he created the “clock theory” of mixing which allowed him to find the break in the song by following the spinning logo on the record. He converted a drum machine, which imitated drum kits and other percussion instruments to produce synthesized electronic tones, into a “beat box” that added percussion to a musical mix. By the name beatbox, you can immediately tell the influence this had on rap records, as drum machines would now be a key signature of hip hop. The turntables have effectively become instruments."
+			const text5 = document.createElement("p")
+			const video = document.createElement("iframe")
+			video.src = "https://www.youtube.com/embed/J0Aulg2ePWA"
+			video.allow = "encrypted-media"
+			video.gesture = "media"
+			video.frameborder = '0'
+			text5.innerHTML = "Fun fact - Napster was the first online streaming service in 1999, but record labels shut them down as they were scared it was going to ruin their sales of CDs. It had 2.4 million consumers until its shutdown in 2001. (AUA 6-7)."
+			const img = document.createElement('img')
+			img.className = 'data'
+			img.src = "https://preview.redd.it/104jk2z09bo51.jpg?width=960&crop=smart&auto=webp&s=b7516d7abc682634592c419e7649303c5b1dc6cd"
+			title2.appendChild(text1)
+			title2.appendChild(text2)
+			title4.appendChild(text3)
+			subHeader1.appendChild(text4)
+			subHeader1.appendChild(video)
+			title4.appendChild(subHeader1)
+			title4.appendChild(text5)
+			title1.appendChild(text)
+			title1.appendChild(list)
+			title1.appendChild(textExtra)
+			body.appendChild(title1)
+			body.appendChild(title2)
+			
+			body.appendChild(title4)
+			body.appendChild(img)
+			header.appendChild(title)
+
+			
 			
 		} else if (author == "La Bouche") {
+			text.innerHTML = "In disco the use of mixers with vinyl to shift sound from one turntable to another was crucial to its mainstream success. The mixer allowed for an atmosphere “conducive to dancing, [and] drinking” (George 5). Live bands became less popular, and with the creation of the synthesizer, the nature of dance music completely changed. Instead of being about the arrangement of musical instruments, it became about the manipulation of synthetic and/or recorded sound. The mixer itself became an instrument, as recorded songs would be remixed and edited to become something completely different. "
+			const title = document.createElement("h2")
+			title.innerHTML = 'The Origins'
+			const title1 = document.createElement("h4")
+			title1.innerHTML = "Disco"
+			const title2 = document.createElement("h4")
+			title2.innerHTML = "Jamaican Sound System"
+			const title4 = document.createElement("h4")
+			title4.innerHTML = "Hip-Hop: The Melting Pot of Modern Sound"
+			const title3 = document.createElement("h4")
+			title3.innerHTML = "Regae: The Pre-lude to Hip-Hop"
+			const title5 = document.createElement("h4")
+
+			const text1 = document.createElement("p")
+			text1.innerHTML = "(Flip the Record) At this time, Jamaican sound system style was also introduced to the partying style in Jamaica. These DJs also used mixers, but had “bass and drum” that “pounded like jackhammers.” They would disjoint the flow of the beat by moving the vinyl record back and forth, a process called scratching. Eventually, DJs would Toast or talk during their performances (George 5). Immediately, you can see the influences Jamaican sound system had on hip-hop, specifically talking over a prerecorded instrumental or beat, and an emphasis on hard-hitting bass. "
+			const text2 = document.createElement("p")
+			text2.innerHTML = "Hip-hop would combine the techniques of disco mixing, dub sounds, and talking on beat to create its signature feel and sound. DJ Kool Herc, who was born in Jamaica is one of the main pioneers of hip-hop. Instead of playing hits records on a mixer, he played the “instrumental breaks and extending them until they sounded like new records” (George 15).  Herc utilized breaks and bridges from songs like “Bongo Rock” from Bongo Band, and “Sex Machine” by James Brown giving hip hop its sonic style. Then, he hired Coke La Rock as his master of ceremonies (or MC) that talked during Herc’s beats. La Rock did not rap as current hip hop artists do but instead was more like the Jamaican sound system toasters. MCs would become a key signature of hip-hop, who originally spoke to make the crowd dance, shared information, and talked about their own skills on the mic. "
+			const text3 = document.createElement("p")
+			text3.innerHTML = "The story of reggae is the prelude to hip-hop. Bob Marley and other Reggae artists reacted to Jamaica’s national crisis after their independence from Great Britain in 1962. There were issues of reorganizing their government, street violence, and remnants of imperialism. They expressed themselves through music and by immersing themselves in their culture and were able to gain mainstream appeal as a disenfranchised community. Reggae united the poor black community in Jamaica and pushed support for the leftist party. The conservative Jamaica Labour Party, funding by the CIA, did not like the radical music of reggae and tried to censor it as much as they could, even trying to assassinate Bob Marley. Both of these parties acted in gangs, actively committing violence against each other. Songs would be made critiquing this fact, contrasting their ideal socialist vision with the death and destruction happening in the streets. In fact, DJ is the “Jamaican term for rappers,” and this is how hip-hop started to take root (Chang 25). "
+			const text4 = document.createElement("p")
+			text4.innerHTML = ""
+			const text5 = document.createElement("p")
+		
+			text5.innerHTML = "Fun fact - Napster was the first online streaming service in 1999, but record labels shut them down as they were scared it was going to ruin their sales of CDs. It had 2.4 million consumers until its shutdown in 2001. (AUA 6-7)."
+			const img = document.createElement('img')
+			img.className = 'data'
+			img.src = ""
+			title2.appendChild(text1)
+			title3.appendChild(text2)
+			title4.appendChild(text3)
+			title5.appendChild(text4)
+			title5.appendChild(text5)
+			title1.appendChild(text)
+			body.appendChild(title1)
+			body.appendChild(title2)
+			body.appendChild(title3)
+			body.appendChild(title4)
+			body.appendChild(title5)
+			body.appendChild(img)
+			header.appendChild(title)
 
 		} else if (author == "Will Smith") {
 

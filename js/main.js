@@ -404,6 +404,9 @@
 			video.allow = "encrypted-media"
 			video.gesture = "media"
 			video.frameborder = '0'
+			video.width = "100%"
+			video.height = "630"
+			video.setAttribute('allowFullScreen', '')
 			text5.innerHTML = "Fun fact - Napster was the first online streaming service in 1999, but record labels shut them down as they were scared it was going to ruin their sales of CDs. It had 2.4 million consumers until its shutdown in 2001. (AUA 6-7)."
 			const img = document.createElement('img')
 			img.className = 'data'

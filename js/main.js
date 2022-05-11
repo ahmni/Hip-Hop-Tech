@@ -352,7 +352,7 @@
 			const text1 = document.createElement("p")
 			text1.innerHTML = "Portable audiotape recorder were invented in 1951, and started as much more expensive than vinyls. By consumers and musicians, they were seen as “soically inferior and less durable” than vinyls (Haring 25). Due to these challenges, it was not able to take over the popularity of vinyls.  It only had a breakthrough in 1964 after the tape cassette player which was half the price of vinyl, with better quality, and all the other benefits of portable audiotapes compared to vinyl. "
 			const text2 = document.createElement("p")
-			text2.innerHTML = "The music industry was looking for something that could improve the quality from cassette players, yet have them in a portable format. This led to the invention of the compact disc or CDs. CDs are the successor of vinyls, being smaller and having better audio quality and durability. The small size allowed them to be more portable and were a massive commercial success, having “explosive growth in the 1980s” and “resulting in the greatest boom period in audio recording history” Haring(28)."
+			text2.innerHTML = "The music industry was looking for something that could improve the quality from cassette players, yet have them in a portable format. This led to the invention of the compact disc or CDs. CDs are the successor of vinyls, being smaller and having better audio quality and durability. The small size allowed them to be more portable and were a massive commercial success, having “explosive growth in the 1980s” and “resulting in the greatest boom period in audio recording history” (Haring 28)."
 			const text3 = document.createElement("p")
 			text3.innerHTML = "Invented in the 1990s by Michael Robertson. MP3 audio compression software “squeezed a digital sound file down to a size practical for Internet distribution” (Haring 3). MP3 made it easily accessible for anyone anywhere to have access to music worldwide in minutes through the internet. It revolutionized how people marketed, distributed, and listened to music. Specifically it was popular for young adults and college students, as they were the main ones using the internet at the time, so it was a natural transition from CDs. "
 			const text4 = document.createElement("p")
@@ -489,7 +489,7 @@
 			text4.innerHTML = ""
 			const text5 = document.createElement("p")
 		
-			text5.innerHTML = "Fun fact - Napster was the first online streaming service in 1999, but record labels shut them down as they were scared it was going to ruin their sales of CDs. It had 2.4 million consumers until its shutdown in 2001. (AUA 6-7)."
+			text5.innerHTML = ""
 			const img = document.createElement('img')
 			img.className = 'data'
 			img.src = ""
@@ -508,7 +508,7 @@
 			header.appendChild(title)
 
 		} else if (author == "Will Smith") {
-			text.innerHTML = "Grandmaster Flash and the Furious Five would become very successful with their debut album The Message, with the title track breaking the charts and receiving the best song of 1982 by NME. (song completely created from synthesizers). This song not only provided a unique sound by not using any sampling and just synthesizers and drum kits but had socially critical lyrics and moved away from the disco dance music influence. The lyrics were about a child born into the ghetto without any future lured into crime and is jailed until he commits suicide in his cell."
+			text.innerHTML = "Grandmaster Flash and the Furious Five would become very successful with their debut album The Message, with the title track breaking the charts and receiving the best song of 1982 by NME.  This song not only provided a unique sound by not using any sampling and just synthesizers and drum machines but had socially critical lyrics and moved away from the disco dance music influence. The lyrics were about a child born into the ghetto without any future lured into crime and is jailed until he commits suicide in his cell."
 			const title = document.createElement("h2")
 			title.innerHTML = 'The Success'
 			const title1 = document.createElement("h3")
@@ -662,7 +662,7 @@
 			const subHeader2 = document.createElement("h4")
 			subHeader2.textContent = "Growth of Independent Artists"
 			const text6 = document.createElement("p")
-			text6.innerHTML = " Due to the exploitation of their artists by record labels, artists started to avoid them like the plague. With the growing popularity of the internet, it was easy to distribute their music, but it was hard to beat out the advertising of record labels due to a lack of funding. This all changed in 2016 with the explosion of SoundCloud rap."
+			text6.innerHTML = " Due to the exploitation of their artists by record labels, artists started to avoid them like the plague. With the growing popularity of the internet, it was easy to distribute their music, but it was hard to beat out the advertising of record labels due to a lack of funding. This all changed in 2016 with the explosion of SoundCloud rap. Anyone could post their music onto the streaming service, SoundCloud, and could blow up and become a superstar the next day if it was catchy enough. For some reason, a lot of eyes were on SoundCloud, and so posting music on there was free marketing and exposure. Modern young artists like Trippie Redd, Lil Uzi Vert, Playboi Carti, XXXTentacion, Juice WRLD are examples of these 'SoundCloud rappers.' "
 			
 			
 			

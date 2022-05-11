@@ -379,6 +379,7 @@
 		} else if (author == "Grandmaster Flash") {
 			text.innerHTML = "To understand why Hip-hop came to be, one has to understand what Hip-hop is. Hip-hop is commonly characterized in 4 elements:"
 			const list = document.createElement("ul")
+			list.id = 'hip-def'
 			const listItem1 = document.createElement("li")
 			listItem1.innerHTML = "DJing"
 			const listItem2 = document.createElement("li")

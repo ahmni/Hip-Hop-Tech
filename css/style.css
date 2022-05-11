@@ -1147,6 +1147,7 @@ we use margins because transforms will be applied dynamically */
 
   ul, ol {
 	  color: black;
+	  font-size: 16px;
   }
 
   h2 {
@@ -1156,4 +1157,8 @@ we use margins because transforms will be applied dynamically */
   #intro {
 	  margin-top: 12%;
 	  max-height: 75%;
+  }
+
+  #hip-def {
+	  font-size: 18px;
   }

@@ -20,7 +20,7 @@
 			modal.remove()
 		}
 		window.onclick = function(e) {
-			console.log(e.target.closest('#intro'))
+			
 			if (e.target.closest('#intro') != modal) {
 				modal.remove()
 			}
@@ -175,6 +175,7 @@
 			year : this.el.querySelector('.player-info > .year--player'),
 			song : this.el.querySelector('.player-stand > .song')
 		};
+		this.record = {};
 		// Arm element center point (we will need this to calculate future rotations of the arm).
 		var armOffset = this.ui.arm.getBoundingClientRect();
 		this.armCenterPoint = { x: armOffset.left + armOffset.width/2, y : armOffset.top + armOffset.height/2 };
@@ -1113,6 +1114,8 @@
 		this.infoElems.artist.innerHTML = record.artist;
 		this.infoElems.title.innerHTML = record.title;
 		this.infoElems.year.innerHTML = record.year;
+		this.record = record;
+	
 	};
 
 	/**
@@ -1235,6 +1238,8 @@
 		// Rotate record.
 		this.ctrls.rotate.addEventListener('click', function() {
 			self._ctrlRotate();
+			
+			
 		});
 
 		this.touchStartFix = function() {
@@ -1324,6 +1329,12 @@
 		else {
 			classie.add(this.ui.player, 'player__element--lp-flip');
 		}
+		if (turntable.currentSide == 1 && this.record) {
+			recordEl.querySelector('image').setAttribute('xlink:href', this.record.coverImg['side1']);
+		} else {
+			recordEl.querySelector('image').setAttribute('xlink:href', this.record.coverImg['side2']);
+		
+		}
 	}
 		
 
@@ -1337,9 +1348,11 @@
 		this.artist = this.wrapper.querySelector('.artist');
 		this.title = this.wrapper.querySelector('.title');
 		this.year = this.wrapper.querySelector('.year');
-
+	
 		this.info = {
-			coverImg : this.cover.querySelector('img').src,
+			coverImg : {side1 : this.cover.querySelector('img').src,
+						side2 : this.cover.querySelector('img').getAttribute('data-side2')
+			},
 			artist : this.artist.innerHTML,
 			title : this.title.innerHTML,
 			year : this.year.innerHTML,
@@ -1679,7 +1692,9 @@
 					// Show record element.
 					dynamics.css(recordEl, { opacity : 1 });
 					// Change the cover of the record.
-					recordEl.querySelector('image').setAttribute('xlink:href', record.info.coverImg);
+					recordEl.querySelector('image').setAttribute('xlink:href', record.info.coverImg['side1']);
+					
+					
 					// Change view.
 					changeView('single', 'player');
 

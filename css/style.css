@@ -1162,3 +1162,15 @@ we use margins because transforms will be applied dynamically */
   #hip-def {
 	  font-size: 18px;
   }
+
+  @media only screen and (max-width: 600px) {
+	.modal-content {
+		width: 70%;
+		max-width: 70%;
+		margin-right: 30%;
+		height: 75%
+	}
+	p,ul, ol {
+		font-size: 12px;
+	}
+  }

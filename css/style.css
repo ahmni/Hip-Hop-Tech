@@ -1155,7 +1155,7 @@ we use margins because transforms will be applied dynamically */
   }
 
   #intro {
-	  margin-top: 12%;
+	  margin-top: 10%;
 	  max-height: 75%;
   }
 

@@ -1173,4 +1173,7 @@ we use margins because transforms will be applied dynamically */
 	p,ul, ol {
 		font-size: 12px;
 	}
+	.close {
+		font-size: 24px;
+	}
   }

@@ -1108,7 +1108,7 @@ we use margins because transforms will be applied dynamically */
 	padding: 0;
 	border: 1px solid rgb(69, 203, 150);
 	width: 38%;
-	height:85%;
+	height:75%;
 	max-height:85%;
 	box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
 	animation-name: animatetop;

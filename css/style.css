@@ -1171,6 +1171,10 @@ we use margins because transforms will be applied dynamically */
 		max-width: 90%;
 		height: 75%
 	}
+	iframe {
+		
+		height:250px;
+	}
 	#intro {
 		width: 100%;
 		height: 100%;

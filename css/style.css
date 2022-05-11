@@ -281,16 +281,17 @@ html.js,
 	position: absolute;
 	z-index: -1;
 	top: -1em;
-	left: -0.15em;
+	left: -0.30em;
 	opacity: 0.1;
 }
 
 .grid__item--deco-1::before {
-	content: '1985';
+	content: '1973';
 }
 
 .grid__item--deco-2::before {
-	content: '1974';
+	content: '1990';
+	margin-right: 20px;
 }
 
 .grid__item--deco-3::before {
@@ -1136,13 +1137,22 @@ we use margins because transforms will be applied dynamically */
 	  width: 100%;
   }
 
-  h4 {
+  h3 {
 	  color: white;
   }
   p {
 	  color: black;
   }
 
-  ul {
-	  color: #6939a8;
+  ul, ol {
+	  color: black;
+  }
+
+  h2 {
+	  text-align: center;
+  }
+
+  #intro {
+	  margin-top: 12%;
+	  max-height: 75%;
   }

@@ -12,6 +12,22 @@
 
 	'use strict';
 
+	function loadIntroduction(window) {
+		let modal = document.getElementById('intro')
+		let span = document.getElementsByClassName("close")[0]
+
+		span.onclick = function () {
+			modal.remove()
+		}
+		window.onclick = function(e) {
+			console.log(e.target.closest('#intro'))
+			if (e.target.closest('#intro') != modal) {
+				modal.remove()
+			}
+		}
+	}
+	loadIntroduction(window)
+
 	// Helper vars and functions.
 	function extend( a, b ) {
 		for( var key in b ) { 
@@ -307,7 +323,7 @@
 		close.innerHTML = "&times"
 		header.classList.add('modal-header')
 		const text = document.createElement("p")
-		text.innerHTML = "This is the story all about how my life turned up "
+		text.innerHTML = ""
 		const body = document.createElement("div")
 		body.classList.add('modal-body')
 		const footer = document.createElement("div")
@@ -323,22 +339,22 @@
 			text.innerHTML = "Vinyls had their first debue in 1901. However, they only became truly popular during the Roaring Twenties when Americans would host parties celebrating and dancing the successes of the time. The sales of records would go from '4 million units per year, ...to over 100 million per year by 1920' (VinyImint)."
 			const title = document.createElement("h2")
 			title.innerHTML = 'The History'
-			const title1 = document.createElement("h4")
+			const title1 = document.createElement("h3")
 			title1.innerHTML = "Vinyls"
-			const title2 = document.createElement("h4")
+			const title2 = document.createElement("h3")
 			title2.innerHTML = "Tape Recorders"
-			const title3 = document.createElement("h4")
+			const title3 = document.createElement("h3")
 			title3.innerHTML = "Compact Discs"
-			const title4 = document.createElement("h4")
+			const title4 = document.createElement("h3")
 			title4.innerHTML = "MP3"
-			const title5 = document.createElement("h4")
+			const title5 = document.createElement("h3")
 			title5.innerHTML = "Streaming"
 			const text1 = document.createElement("p")
 			text1.innerHTML = "Portable audiotape recorder were invented in 1951, and started as much more expensive than vinyls. By consumers and musicians, they were seen as “soically inferior and less durable” than vinyls (Haring 25). Due to these challenges, it was not able to take over the popularity of vinyls.  It only had a breakthrough in 1964 after the tape cassette player which was half the price of vinyl, with better quality, and all the other benefits of portable audiotapes compared to vinyl. "
 			const text2 = document.createElement("p")
 			text2.innerHTML = "The music industry was looking for something that could improve the quality from cassette players, yet have them in a portable format. This led to the invention of the compact disc or CDs. CDs are the successor of vinyls, being smaller and having better audio quality and durability. The small size allowed them to be more portable and were a massive commercial success, having “explosive growth in the 1980s” and “resulting in the greatest boom period in audio recording history” Haring(28)."
 			const text3 = document.createElement("p")
-			text3.innerHTML = "Invented in the 1990s by Michael Robertson. MP3 audio compression software “squeezed a digital sound file down to a size practical for Internet distribution” (Haring 3).MP3 made it easily accessible for anyone anywhere to have access to music worldwide in minutes through the internet. It revolutionized how people marketed, distributed, and listened to music. Specifically it was popular for young adults and college students, as they were the main ones using the internet at the time, so it was a natural transition from CDs. "
+			text3.innerHTML = "Invented in the 1990s by Michael Robertson. MP3 audio compression software “squeezed a digital sound file down to a size practical for Internet distribution” (Haring 3). MP3 made it easily accessible for anyone anywhere to have access to music worldwide in minutes through the internet. It revolutionized how people marketed, distributed, and listened to music. Specifically it was popular for young adults and college students, as they were the main ones using the internet at the time, so it was a natural transition from CDs. "
 			const text4 = document.createElement("p")
 			text4.innerHTML = "With explosive popularity of the internet, record labels and the music industry as a whole were crumbling as profits were at an all time low since the CD boom. No one was buying CDs anymore after the 2000s, and piracy was rampant. However, starting in 2010, streaming services like spotify, itunes, and youtube. would eventually be able to revitalize the music industry. With the development of these software services, anyone can have access to all the music they want with only a $5 subscription monthly, or free with ads and worse quality. At such a low price point and with extreme ease of access, it dissuaded piracy and allowed record labels to get subsidies from these streaming companies  (AUA 5-8)."
 			const text5 = document.createElement("p")
@@ -381,11 +397,11 @@
 			
 			const title = document.createElement("h2")
 			title.innerHTML = 'The Reasons'
-			const title1 = document.createElement("h4")
+			const title1 = document.createElement("h3")
 			title1.innerHTML = "Definition"
-			const title2 = document.createElement("h4")
+			const title2 = document.createElement("h3")
 			title2.innerHTML = "Historical Context: The Neglected"
-			const title4 = document.createElement("h4")
+			const title4 = document.createElement("h3")
 			title4.innerHTML = "Digital Technology"
 		
 			const text1 = document.createElement("p")
@@ -395,7 +411,7 @@
 			const text3 = document.createElement("p")
 			text3.innerHTML = "All hip-hop beats are predicated on using digital technology to take “sounds from old records and organize them into new patterns”(Schloss 1). Beats themselves are defined as musical collages of sections of recorded sound. When DJs and MCs started to record songs instead of doing only live performances, their techniques became more complex. MCs began to create more detailed narratives with complex rhythms, cadences, and rhyme, heavily influenced by rhythmic poetry. This gives to the name rap which stands for rhythm and poetry. Strategies were developed in the studio that developed “digital sampling,” eventually these DJs would be the first producers. "
 			const text4 = document.createElement("p")
-			const subHeader1 = document.createElement("h5")
+			const subHeader1 = document.createElement("h4")
 			subHeader1.textContent = "Turning Turntables to Instruments"
 			text4.innerHTML = "Grandmaster Flash would create many of the techniques of sampling used in hip hop. “Punch phrasing” –playing a quick burst from a record on one turntable while it continues on the other– and “back spinning” – alternately spinning records backward to repeat the same phrase over and over are credited to Flash” (George 18). Furthermore, he created the “clock theory” of mixing which allowed him to find the break in the song by following the spinning logo on the record. He converted a drum machine, which imitated drum kits and other percussion instruments to produce synthesized electronic tones, into a “beat box” that added percussion to a musical mix. By the name beatbox, you can immediately tell the influence this had on rap records, as drum machines would now be a key signature of hip hop. The turntables have effectively become instruments."
 			const text5 = document.createElement("p")
@@ -407,10 +423,23 @@
 			video.width = "100%"
 			video.height = "630"
 			video.setAttribute('allowFullScreen', '')
-			text5.innerHTML = "Fun fact - Napster was the first online streaming service in 1999, but record labels shut them down as they were scared it was going to ruin their sales of CDs. It had 2.4 million consumers until its shutdown in 2001. (AUA 6-7)."
+			text5.innerHTML = "The sampler was first developed in 1981 called the E-mu Emulator. It had the ability to store manipulate and playback any sound stored in it, requiring no musical expertise, you just had to push the buttons. Sampling was used in other genres, like pop, but used in a different manner. Before hip hop, it was used to disguise the absence of a live instrument. In Hip hop, entire beats were created by editing and modifying old records and weren’t embarrassed to be using other people’s sounds. Another type of beat-making involved the use of synthesizers and drum machines to create original beats. Drum machines would record live instruments, and a producer would simulate sounds from various instruments, essentially making a one-man band. "
+			const imgTitle1 = document.createElement('h4')
+			imgTitle1.textContent = "Drum Machine"
+			const imgTitle2 = document.createElement('h4')
+			imgTitle2.textContent = "Sampler"
 			const img = document.createElement('img')
 			img.className = 'data'
-			img.src = "https://preview.redd.it/104jk2z09bo51.jpg?width=960&crop=smart&auto=webp&s=b7516d7abc682634592c419e7649303c5b1dc6cd"
+			img.src = "https://www.attackmagazine.com/wp-content/uploads/2012/08/TR-909_T_600_FNL_A.jpg"
+			const img2 = document.createElement('img')
+			img2.className = 'data'
+			img2.src = "https://www.vintagesynth.com/sites/default/files/2017-05/akai_s950_lg.jpg"
+			const imgTitle3 = document.createElement('h4')
+			imgTitle3.textContent = "Synthesizer"
+			const img3 = document.createElement('img')
+			img3.className = 'data'
+			img3.src = "https://support.musicgateway.com/wp-content/uploads/2021/04/vintage-synth.png"
+			
 			title2.appendChild(text1)
 			title2.appendChild(text2)
 			title4.appendChild(text3)
@@ -425,7 +454,12 @@
 			body.appendChild(title2)
 			
 			body.appendChild(title4)
-			body.appendChild(img)
+			imgTitle1.appendChild(img)
+			imgTitle3.appendChild(img3)
+			imgTitle2.appendChild(img2)
+			title4.appendChild(imgTitle1)
+			title4.appendChild(imgTitle3)
+			title4.appendChild(imgTitle2)
 			header.appendChild(title)
 
 			
@@ -434,15 +468,15 @@
 			text.innerHTML = "In disco the use of mixers with vinyl to shift sound from one turntable to another was crucial to its mainstream success. The mixer allowed for an atmosphere “conducive to dancing, [and] drinking” (George 5). Live bands became less popular, and with the creation of the synthesizer, the nature of dance music completely changed. Instead of being about the arrangement of musical instruments, it became about the manipulation of synthetic and/or recorded sound. The mixer itself became an instrument, as recorded songs would be remixed and edited to become something completely different. "
 			const title = document.createElement("h2")
 			title.innerHTML = 'The Origins'
-			const title1 = document.createElement("h4")
+			const title1 = document.createElement("h3")
 			title1.innerHTML = "Disco"
-			const title2 = document.createElement("h4")
+			const title2 = document.createElement("h3")
 			title2.innerHTML = "Jamaican Sound System"
-			const title4 = document.createElement("h4")
+			const title4 = document.createElement("h3")
 			title4.innerHTML = "Hip-Hop: The Melting Pot of Modern Sound"
-			const title3 = document.createElement("h4")
+			const title3 = document.createElement("h3")
 			title3.innerHTML = "Regae: The Pre-lude to Hip-Hop"
-			const title5 = document.createElement("h4")
+			const title5 = document.createElement("h3")
 
 			const text1 = document.createElement("p")
 			text1.innerHTML = "(Flip the Record) At this time, Jamaican sound system style was also introduced to the partying style in Jamaica. These DJs also used mixers, but had “bass and drum” that “pounded like jackhammers.” They would disjoint the flow of the beat by moving the vinyl record back and forth, a process called scratching. Eventually, DJs would Toast or talk during their performances (George 5). Immediately, you can see the influences Jamaican sound system had on hip-hop, specifically talking over a prerecorded instrumental or beat, and an emphasis on hard-hitting bass. "
@@ -473,11 +507,179 @@
 			header.appendChild(title)
 
 		} else if (author == "Will Smith") {
+			text.innerHTML = "Grandmaster Flash and the Furious Five would become very successful with their debut album The Message, with the title track breaking the charts and receiving the best song of 1982 by NME. (song completely created from synthesizers). This song not only provided a unique sound by not using any sampling and just synthesizers and drum kits but had socially critical lyrics and moved away from the disco dance music influence. The lyrics were about a child born into the ghetto without any future lured into crime and is jailed until he commits suicide in his cell."
+			const title = document.createElement("h2")
+			title.innerHTML = 'The Success'
+			const title1 = document.createElement("h3")
+			title1.innerHTML = "Initial Success: Breaking the Charts"
+			const title2 = document.createElement("h3")
+			title2.innerHTML = "Music Videos"
+			const title3 = document.createElement("h3")
+			title3.innerHTML = "Celebrity Status & Trendsetters"
+			const title4 = document.createElement("h3")
+			title4.innerHTML = "MP3"
+			const title5 = document.createElement("h3")
+			title5.innerHTML = "Streaming"
+			const text1 = document.createElement("p")
+			text1.innerHTML = "Nelson George argues that of everything that has affected the evolution of hip hop, –“cash, corporations, crack, sampling, crime, violence– nothing is more important than music video” (George 97). Making hip-hop videos was more complicated than having an idea and filming it, there has to be a “certain environment and community” (Sayre 2). Music videos brought not only hip hop songs to life but the culture. Graffiti art would be shown, and people would be break-dancing, providing a new avenue for story-telling and immersion. However, in the beginning, it was hard to get black-led music videos on MTV until Michael Jackson’s work with thriller videos. This meant that hip-hop music videos were more likely to be run in London than in the Bronx, giving a global reach influence to hip hop. Run-D.M.C pioneered the role video played in hip-hop by using rock motifs to make hip-hop MTV friendly. And as more rap videos emerged and reached mainstream success, MTV started a show just for rap, called Yo, MTV Raps!, having the “highest ratings of any show in the young network’s history (George 99).  Having Yo, MTV Raps! made hip hop music videos regularly scheduled on a national platform, giving it the exposure it needed to reach the mainstream, and forcing people to get used to hip hop’s urban culture. "
+			const text2 = document.createElement("p")
+			text2.innerHTML = "Hip-Hop’s explosive popularity had the music industry have its eyes on hip hop, as they want some piece of the pie. Rappers like Snoop Dog (Flip Record) or D.M.C Run would become national and sometimes international trendsetters by having a new clothing style in their music videos. (ex. Snoop Dogg’s braids or Run’s hat) An artist could blow up solely based on their music video if they had a “distinctive, exciting look” (George 99). Since anyone could blow up and reach mainstream success by being featured on Yo, it led to grassroots rap videos that would become the fabric of not just hip hop culture, but American culture as a whole. Its success forced other tv programmers like BET to make rap videos a part of their regularly scheduled programming, giving hip-hop artists the status of cultural icons. These music videos heavily resembled short movies, as they had to have editors, stylists, directors, and actors (Sayre 4). Music no longer was the only way to become mainstream, but having style, star power and charisma can put you on the chart. People like Ice Cube, Ice-T, and Will Smith not only made music, but they were in plenty of significant and culturally impactful films. "
+			const text3 = document.createElement("p")
+			text3.innerHTML = "Invented in the 1990s by Michael Robertson. MP3 audio compression software “squeezed a digital sound file down to a size practical for Internet distribution” (Haring 3). MP3 made it easily accessible for anyone anywhere to have access to music worldwide in minutes through the internet. It revolutionized how people marketed, distributed, and listened to music. Specifically it was popular for young adults and college students, as they were the main ones using the internet at the time, so it was a natural transition from CDs. "
+			const text4 = document.createElement("p")
+			text4.innerHTML = "With explosive popularity of the internet, record labels and the music industry as a whole were crumbling as profits were at an all time low since the CD boom. No one was buying CDs anymore after the 2000s, and piracy was rampant. However, starting in 2010, streaming services like spotify, itunes, and youtube. would eventually be able to revitalize the music industry. With the development of these software services, anyone can have access to all the music they want with only a $5 subscription monthly, or free with ads and worse quality. At such a low price point and with extreme ease of access, it dissuaded piracy and allowed record labels to get subsidies from these streaming companies  (AUA 5-8)."
+			const text5 = document.createElement("p")
+			const video = document.createElement("iframe")
+			video.src = "https://www.youtube.com/embed/h1vKOchATXs"
+			video.allow = "encrypted-media"
+			video.gesture = "media"
+			video.frameborder = '0'
+			video.width = "100%"
+			video.height = "630"
+			video.setAttribute('allowFullScreen', '')
+			text5.innerHTML = "Fun fact - Napster was the first online streaming service in 1999, but record labels shut them down as they were scared it was going to ruin their sales of CDs. It had 2.4 million consumers until its shutdown in 2001. (AUA 6-7)."
+			const img = document.createElement('img')
+			img.className = 'data'
+			img.src = "https://preview.redd.it/104jk2z09bo51.jpg?width=960&crop=smart&auto=webp&s=b7516d7abc682634592c419e7649303c5b1dc6cd"
+			title2.appendChild(text1)
+			title3.appendChild(text2)
+			title2.appendChild(video)
+			title4.appendChild(text3)
+			title5.appendChild(text4)
+			title5.appendChild(text5)
+			title1.appendChild(text)
+			body.appendChild(title1)
+			body.appendChild(title2)
+			body.appendChild(title3)
+			// body.appendChild(title4)
+			// body.appendChild(title5)
+			// body.appendChild(img)
+			header.appendChild(title)
 
 		} else if (author == "Stetsasonic") {
-
+			text.innerHTML = "Hip-Hop beat-making received criticism as people did not believe it was original work as they were taken already songs and making edits, and thought they were lazy for not learning how to play actual instruments. People from the music industry, such as MTume made the analogy that it was like taking “chapters from James Baldwin in my books and claiming the words” as his (George 89). He wasn’t entirely against sampling, but he was upset that many hip-hop producers had no understanding of musical theory, could not play instruments, and only saw record collection as a tool of beat making. He thought they were lazy, and disrespected soul musicians. Some of his points were correct, specifically him talking about the lack of crediting original recordings of samples. "
+			const title = document.createElement("h2")
+			title.innerHTML = 'The Controversy'
+			const title1 = document.createElement("h3")
+			title1.innerHTML = "Criticism over Sampling"
+			const title2 = document.createElement("h3")
+			title2.innerHTML = "Hip-Hop's Response Through Music"
+			const title3 = document.createElement("h3")
+			title3.innerHTML = "Arguments for Sampling"
+			const video = document.createElement("iframe")
+			video.src = "https://www.youtube.com/embed/2kdQ4soLcac"
+			video.allow = "encrypted-media"
+			video.gesture = "media"
+			video.frameborder = '0'
+			video.width = "100%"
+			video.height = "630"
+			video.setAttribute('allowFullScreen', '')
+			text5.innerHTML = "Fun fact - Napster was the first online streaming service in 1999, but record labels shut them down as they were scared it was going to ruin their sales of CDs. It had 2.4 million consumers until its shutdown in 2001. (AUA 6-7)."
+			
+			const title4 = document.createElement("h3")
+			title4.innerHTML = "MP3"
+			const title5 = document.createElement("h3")
+			title5.innerHTML = "Streaming"
+			const text1 = document.createElement("p")
+			text1.innerHTML = "However, hip-hop fans saw this attack on sampling as another way of keeping African-Americans “in their place” as rich, majority-white record labels would sue hip-hop artists, either taking down their music or taking all the revenue from it. Hip-hop had a response to the critiques called  “Talking All That Jazz” (first side of vinyl), which sampled a jazz song, directly taking shots at Mtume, as he was a Jazz artist. The creators of the song, Stetsasonic were sued afterward for the sample. Ironically, the lawsuit only brought more eyes onto not just the song, but hip-hop as a whole, which Stetsasonic took advantage of by creating a music video that begins with a skit in front of a courthouse. Instead of crumbling due to pressure from the establishment, hip-hop artists embraced the critiques with a rebellious nature just like in the method of graffiti. Public Enemy's “Who stole the soul?“ (Flip the record to listen) is another example of this, where they try to fit as many samples as possible into a song, while making the argument that the music they are sampling (mainly Jazz and Soul) originally came from African-Americans, but was stolen from them by white people. In both of these tracks, they claim that hip-hop rejuvenates these genres and songs back to life by giving them a completely new sound, as these songs lost their mainstream appeal."
+			const text2 = document.createElement("p")
+			text2.innerHTML = "Sampling represents a generational schism that ushered in the golden age of hip hop. Old-heads” did not like 1. The reuse of songs and 2. The lack of live instruments for making beats. People questioned whether or not hip-hip is actually music, and hip-hop challenges the definition of what music really means. MC Supreme used an analogy that it's the same as an artist not making their own painting than are they really artists as an argument against his own mother (Schloss 23).			"
+			const text3 = document.createElement("p")
+			text3.innerHTML = "Adding sampling as a toolkit for making music allowed beat-making to become substantially more complex with added depth than what any live performance could create. The focus of artists can be elsewhere instead of on live instruments, such as lyrics, themes, and story-telling for a full-length album. The result is a collection of sounds of instruments, story-telling, prerecorded songs, and music videos creating a synergy that is the closest thing to a modern-day symphony.  "
+			const text4 = document.createElement("p")
+			text4.innerHTML = "With explosive popularity of the internet, record labels and the music industry as a whole were crumbling as profits were at an all time low since the CD boom. No one was buying CDs anymore after the 2000s, and piracy was rampant. However, starting in 2010, streaming services like spotify, itunes, and youtube. would eventually be able to revitalize the music industry. With the development of these software services, anyone can have access to all the music they want with only a $5 subscription monthly, or free with ads and worse quality. At such a low price point and with extreme ease of access, it dissuaded piracy and allowed record labels to get subsidies from these streaming companies  (AUA 5-8)."
+			const text5 = document.createElement("p")
+		
+			text5.innerHTML = "Fun fact - Napster was the first online streaming service in 1999, but record labels shut them down as they were scared it was going to ruin their sales of CDs. It had 2.4 million consumers until its shutdown in 2001. (AUA 6-7)."
+			const img = document.createElement('img')
+			img.className = 'data'
+			img.src = "https://preview.redd.it/104jk2z09bo51.jpg?width=960&crop=smart&auto=webp&s=b7516d7abc682634592c419e7649303c5b1dc6cd"
+			title2.appendChild(text1)
+			title2.appendChild(video)
+			title3.appendChild(text2)
+			title3.appendChild(text3)
+			title5.appendChild(text4)
+			title5.appendChild(text5)
+			title1.appendChild(text)
+			body.appendChild(title1)
+			body.appendChild(title2)
+			body.appendChild(title3)
+			// body.appendChild(title4)
+			// body.appendChild(title5)
+			// body.appendChild(img)
+			header.appendChild(title)
 		} else if (author == "Nas") {
 			
+			const list = document.createElement("ul")
+			const listItem1 = document.createElement("li")
+			listItem1.innerHTML = "Allowing for way more complex beats than say, classical music"
+			const listItem2 = document.createElement("li")
+			const listItem3 = document.createElement("li")
+			const nestedList = document.createElement("ul")
+			listItem2.innerHTML = "One person can make an “orchestra” of bass, percussion, synths, etc."
+			listItem3.innerHTML = "Focus can be put on other elements of making music"
+			const NLitem1 = document.createElement("li")
+			const NLitem2 = document.createElement("li")
+			const NLitem3 = document.createElement("li")
+			NLitem1.innerHTML = "De La Soul's '3 Feet High and Rising' is themed after a game show, split into 4 parts for each contestant "
+			NLitem2.innerHTML = "Nas' 'Illmatic' and 'It Was Written' was written as a first-person narrative of 2 albums, based on his experiences of growing up in urban poverty and gang-life as a teenager, then in the second album (Flip record) he becomes a theatrical mafioso. "
+			NLitem3.innerHTML = "Public enemy had complete albums filled with narratives of black nationalist rhetoric, police brutality, critiques of white supremacy, and exploitation of the music industry"
+			list.appendChild(listItem1)
+			list.appendChild(listItem2)
+			list.appendChild(listItem3)
+			listItem3.appendChild(nestedList)
+			nestedList.appendChild(NLitem1)
+			nestedList.appendChild(NLitem2)
+			nestedList.appendChild(NLitem3)
+			
+			
+			
+			const title = document.createElement("h2")
+			title.innerHTML = 'The Impact'
+			const title1 = document.createElement("h3")
+			title1.innerHTML = "Abstraction"
+			const title2 = document.createElement("h3")
+			title2.innerHTML = "Ease of Access"
+			const title4 = document.createElement("h3")
+			title4.innerHTML = "Effects of Streaming"
+			const list2 = document.createElement("ul")
+			const list2Item1 = document.createElement("li")
+			list2Item1.innerHTML = "Allowing for way more complex beats than say, classical music"
+			const list2Item2 = document.createElement("li")
+			
+			
+			list2Item1.innerHTML = "The urban poor could now make complex and high-quality music. There was no need to buy an expensive instrument and spend money on lessons to learn how to use it"
+			list2Item2.innerHTML = "If you had a natural gift for finding good flows and sounds to sample, you can make hip-hop with just a sampler and a vinyl player."
+			list2.appendChild(list2Item1)
+			list2.appendChild(list2Item2)
+			
+			const subHeader1 = document.createElement("h4")
+			subHeader1.textContent = "Growth of Niche Genres & Sub-Genres"
+			
+			const text5 = document.createElement("p")
+			text5.innerHTML = "“Niche markets satisfy the needs of different subcultures and an unlisted group of people who were once forced to fit into the “one for all formula” but not anymore.” Record labels and the industry pushed out the most generally “listenable” music which was mainly pop-like music. But streaming changed this by massively increasing the growth of niche markets. The internet completely “changed the economics of music distribution, supply and formation” Anyone could make and distribute their music at no cost (AUA 6-7).  "
+			const subHeader2 = document.createElement("h4")
+			subHeader2.textContent = "Growth of Independent Artists"
+			const text6 = document.createElement("p")
+			text6.innerHTML = " Due to the exploitation of their artists by record labels, artists started to avoid them like the plague. With the growing popularity of the internet, it was easy to distribute their music, but it was hard to beat out the advertising of record labels due to a lack of funding. This all changed in 2016 with the explosion of SoundCloud rap."
+			
+			
+			
+			
+			subHeader1.appendChild(text5)
+			subHeader2.appendChild(text6)
+			title4.appendChild(subHeader1)
+			title4.appendChild(subHeader2)
+			title1.appendChild(text)
+			title1.appendChild(list)
+			title2.appendChild(list2)
+
+			body.appendChild(title1)
+			body.appendChild(title2)
+			
+			body.appendChild(title4)
+			
+			header.appendChild(title)
 		}
 
 
